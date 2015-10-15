@@ -25,6 +25,9 @@ index = 1
 triangle = 0
 while True:
     triangle = triangle + index
+    if triangle % 2 == 1:
+        index = index + 1
+        continue
     if countDivisors(triangle) > 500:
         answer = triangle
         break
