@@ -13,11 +13,13 @@ def multiple35Sum(n):
         if (x % 3 == 0) or (x % 5 == 0):
             totalSum += x
     return totalSum
+#    return sum([x for x in range(n) if x % 3 == 0 or x % 5 == 0])
+#    return reduce(lambda x,y: x+y, filter(lambda n: n%3==0 or n%5==0, range(1000)))
 
-start = time.time()
+start = time.clock()
 
 answer = multiple35Sum(1000)
 
-elapsed = time.time() - start
+elapsed = time.clock() - start
 
 print("%s found in %s seconds") % (answer,elapsed)
