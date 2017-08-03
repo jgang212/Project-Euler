@@ -15,7 +15,7 @@ def checkIfTriangle(n):
         
     low = int(math.floor((2*n)**0.5))
     high = int(math.ceil((2*n)**0.5))
-    if low * high / 2 == n:
+    if low * high // 2 == n:
         return True
     return False
 
@@ -39,11 +39,11 @@ for word in wordList:
     for letter in word:
         wordSum = wordSum + values[letter]
     if checkIfTriangle(wordSum):
-        print word, wordSum
+        #print word, wordSum
         count = count + 1
 
 answer = count
 
 elapsed = time.clock() - start
 
-print("%s found in %s seconds") % (answer,elapsed)
+print("{} found in {} seconds".format(answer,elapsed))

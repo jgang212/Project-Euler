@@ -20,4 +20,4 @@ answer = sumOfDigits(2**1000)
 
 elapsed = time.time() - start
 
-print("%s found in %s seconds") % (answer,elapsed)
+print("{} found in {} seconds".format(answer,elapsed))

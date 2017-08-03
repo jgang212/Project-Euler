@@ -10,7 +10,7 @@ import time
 def checkIfPalindrome(n):
     number = str(n)
     length = len(number)
-    for x in range(0, length / 2):
+    for x in range(0, length // 2):
         if number[x] == number[length - 1 - x]:
             pass
         else:
@@ -43,4 +43,4 @@ answer = productPalindrome(999,100)
 
 elapsed = time.time() - start
 
-print("%s found in %s seconds") % (answer,elapsed)
+print("{} found in {} seconds".format(answer,elapsed))

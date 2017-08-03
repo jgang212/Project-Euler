@@ -14,7 +14,7 @@ def factorialSum(n):
     final= 0
     while new:        
         digit = new % 10
-        new = new / 10
+        new = new // 10
         final += digit
     return final
     
@@ -24,5 +24,5 @@ answer = factorialSum(100)
 
 elapsed = time.time() - start
 
-print("%s found in %s seconds") % (answer,elapsed)
+print("{} found in {} seconds".format(answer,elapsed))
  

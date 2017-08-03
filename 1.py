@@ -22,4 +22,4 @@ answer = multiple35Sum(1000)
 
 elapsed = time.clock() - start
 
-print("%s found in %s seconds") % (answer,elapsed)
+print("{} found in {} seconds".format(answer,elapsed))

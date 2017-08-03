@@ -31,4 +31,4 @@ answer = fibEven()
 
 elapsed = time.time() - start
 
-print("%s found in %s seconds") % (answer,elapsed)
+print("{} found in {} seconds".format(answer,elapsed))
