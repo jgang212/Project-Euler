@@ -20,8 +20,8 @@ for n in range(3,size+1,2):
         num = num + increment*4 + 2
         increment += 2
 
-elapsed = time.clock() - start
-                    
 answer = sum(diagonalNums)+1
+            
+elapsed = time.clock() - start
 
 print("{} found in {} seconds".format(answer,elapsed))
