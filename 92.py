@@ -5,28 +5,36 @@ Created on Thu Oct 15 13:26:59 2015
 @author: jack.gang
 """
 
-# takes two minutes, not good enough
-
 import time    
 
 start = time.clock()
 
 count = 0
-for x in range(1, 10000001):
+# we know from problem that these numbers will cause a break or a count
+breakValues = [44, 32, 13, 1, 10]
+countValues = [85, 89, 145, 42, 20, 4, 16, 37, 58]
+lookUp = {}
+for x in range(1, 10000000):
     value = x
     while True:
-        if value == 44 or value == 32 or value == 13 or value == 10 or value == 1:
+        if value in breakValues:
             break
-        if value == 85 or value == 89 or value == 145 or value == 42 or value == 20 or value == 4 or value == 16 or value == 37 or value == 58:
+        elif value in countValues:
             count = count + 1
             break
-        newValue = 0
-        for digit in str(value):
-            newValue = newValue + int(digit)**2
-        value = newValue
+        elif value in lookUp:
+            while lookUp[value] in lookUp:
+                value = lookUp[value]
+            value = lookUp[value]
+        else:
+            newValue = 0
+            for digit in str(value):
+                newValue = newValue + int(digit)**2
+            lookUp[x] = newValue        # store for dynamic programming
+            value = newValue
 
 answer = count
 
 elapsed = time.clock() - start
 
-print("%s found in %s seconds") % (answer,elapsed)
+print("{} found in {} seconds".format(answer,elapsed))
