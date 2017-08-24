@@ -6,13 +6,7 @@ Created on Wed Oct 14 15:58:33 2015
 """
 
 import time
-
-def sumOfDigits(n):
-    str_n = str(n)
-    totalSum = 0
-    for x in range(0, len(str_n)):
-        totalSum = totalSum + int(str_n[x])
-    return totalSum
+from EulerFunctions import sumOfDigits
 
 start = time.time()
 

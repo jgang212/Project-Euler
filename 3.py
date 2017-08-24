@@ -6,13 +6,7 @@ Created on Thu Oct 15 08:22:40 2015
 """
 
 import time
-
-def isPrime(n):
-    limit = int(n**0.5)
-    for x in range(limit, 1, -1):
-        if n % x == 0:
-            return False
-    return True
+from EulerFunctions import isPrime
 
 def largestPrimeFactor(n):
     limit = int(n**0.5)

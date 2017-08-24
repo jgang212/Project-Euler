@@ -6,19 +6,7 @@ Created on Mon Oct 19 13:33:19 2015
 """
 
 import time    
-
-def isPrime(n):
-    if n <= 1:
-        return False
-    if n == 2:
-        return True
-    if n % 2 == 0:
-        return False
-    limit = int(n**0.5)
-    for x in range(2, limit+1):
-        if n % x == 0:
-            return False
-    return True
+from EulerFunctions import isPrime
 
 def rotate(n):
     return str(n)[len(str(n))-1] + str(n)[:len(str(n))-1]

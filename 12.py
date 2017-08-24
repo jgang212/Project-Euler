@@ -7,17 +7,7 @@ Created on Thu Oct 15 10:09:42 2015
 
 import time    
 import math
-
-def countDivisors(n):
-    count = 0
-    limit = int(math.floor(n**0.5))
-    for x in range(1, limit+1):
-        if n % x == 0:
-            count = count + 1
-    count = count * 2
-    if float(n**0.5).is_integer():
-        count = count - 1
-    return count
+from EulerFunctions import countDivisors
 
 start = time.clock()
 

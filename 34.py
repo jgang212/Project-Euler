@@ -6,15 +6,9 @@ Created on Thu Oct 15 13:26:59 2015
 """
 
 import time    
+from EulerFunctions import factorial
 
 start = time.clock()
-
-# dynamic programming factorial
-def factorial(n, dpTable):
-    result = 1
-    if (n > 1) and dpTable[n-1]:
-        result = n * dpTable[n-1]
-    return result
 
 answer = 0
 table = {}
@@ -27,7 +21,7 @@ for i in range(1, 2177281):
         if int(digit) not in table:
             table[int(digit)] = fact
     if factSum == i and (i not in [1, 2]):
-        print(i)
+        #print(i)
         answer += i
 
 elapsed = time.clock() - start

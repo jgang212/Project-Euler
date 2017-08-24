@@ -6,16 +6,7 @@ Created on Wed Oct 14 15:30:36 2015
 """
 
 import time
-
-def checkIfPalindrome(n):
-    number = str(n)
-    length = len(number)
-    for x in range(0, length // 2):
-        if number[x] == number[length - 1 - x]:
-            pass
-        else:
-            return False
-    return True
+from EulerFunctions import checkIfPalindrome
 
 def productPalindrome(largest, smallest):
     a = largest

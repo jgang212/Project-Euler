@@ -5,11 +5,11 @@ Created on Thu Oct 15 13:26:59 2015
 @author: jack.gang
 """
 
-import time  
+import time
 
 start = time.clock()
 
-def isPandigital(n):
+def isPandigitalZero(n):
     if len(str(n)) != len(set(str(n))):
         return False
     for i in range(0, len(str(n))):
@@ -54,7 +54,7 @@ for num in range(1023456, 9876543+1):
                 number = int(str(num) + "0" + str(seventeenMultiple))
             else:
                 number = int(str(num) + str(seventeenMultiple))
-            if isPandigital(number):
+            if isPandigitalZero(number):
                 if checkProperty(number, divideSevenList, divideElevenList, divideThirteenList):
                     answer += number
     

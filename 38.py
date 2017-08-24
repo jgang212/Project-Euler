@@ -6,14 +6,9 @@ Created on Thu Oct 15 13:26:59 2015
 """
 
 import time  
+from EulerFunctions import isPandigital
 
 start = time.clock()
-
-def isPandigital(n):
-    for i in range(1, len(str(n))+1):
-        if str(i) not in str(n):
-            return False
-    return True
 
 answer = 0
 # we know it has to start with 9 from examples, and can't be more than 4 digits since n > 1
