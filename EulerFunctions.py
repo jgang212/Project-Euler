@@ -83,12 +83,6 @@ def findDivisors(n):
                 divisors.append(int(n / i))
     return sorted(divisors)
 
-def factorial(n, dpTable):
-    result = 1
-    if (n > 1) and dpTable[n-1]:
-        result = n * dpTable[n-1]
-    return result
-
 def convertToBinary(n):
     binaryStr = ""
     while n > 0:
