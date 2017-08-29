@@ -119,3 +119,6 @@ def findPrimeFactors(n, primeList):
         if n % prime == 0:
             result.append(prime)
     return result
+
+def round_down(n, divisor):
+    return n - (n % divisor)

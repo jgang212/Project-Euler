@@ -6,11 +6,9 @@ Created on Thu Oct 15 10:09:42 2015
 """
 
 import time    
+from EulerFunctions import round_down
 
 start = time.clock()
-
-def round_down(n, divisor):
-    return n - (n % divisor)
 
 numberLengthDict = {}
 # there are the unique words <= 1000
