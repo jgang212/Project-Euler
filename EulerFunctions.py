@@ -130,31 +130,3 @@ def shoelacePolygonArea(points):
         summation1 += points[i][0]*points[i+1][1]
         summation2 += points[i+1][0]*points[i][1]
     return 0.5 * abs(summation1 + points[-1][0]*points[0][1] - summation2 - points[0][0]*points[-1][1])
-
-def checkBouncy(n):
-    # check not increasing
-    increasing = True
-    compareDigit = int(str(n)[0])
-    for digit in str(n):
-        if int(digit) < compareDigit:
-            increasing = False
-            break
-        else:
-            compareDigit = int(digit)
-    
-    if increasing:
-        return False
-    
-    # check not decreasing
-    decreasing = True
-    compareDigit = int(str(n)[0])
-    for digit in str(n):
-        if int(digit) > compareDigit:
-            decreasing = False
-            break
-        else:
-            compareDigit = int(digit)
-    
-    if decreasing:
-        return False
-    return True
