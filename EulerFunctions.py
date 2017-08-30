@@ -122,3 +122,11 @@ def findPrimeFactors(n, primeList):
 
 def round_down(n, divisor):
     return n - (n % divisor)
+
+def shoelacePolygonArea(points):
+    summation1 = 0
+    summation2 = 0
+    for i in range(0, len(points)-1):
+        summation1 += points[i][0]*points[i+1][1]
+        summation2 += points[i+1][0]*points[i][1]
+    return 0.5 * abs(summation1 + points[-1][0]*points[0][1] - summation2 - points[0][0]*points[-1][1])
