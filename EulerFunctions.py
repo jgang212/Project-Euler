@@ -97,9 +97,7 @@ def checkIfPalindrome(n):
     number = str(n)
     length = len(number)
     for x in range(0, length // 2):
-        if number[x] == number[length - 1 - x]:
-            pass
-        else:
+        if number[x] != number[length - 1 - x]:
             return False
     return True
 
